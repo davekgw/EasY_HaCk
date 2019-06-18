@@ -1,0 +1,147 @@
+#!/bin/sh
+clear
+#colour
+
+R='\033[1;31m'
+B='\033[0;34m'
+C='\033[0;36m'
+G='\033[1;32m'
+W='\033[1;37m'
+Y='\033[0;33m'
+Y2='\033[1;33m'
+
+#banner
+echo $C
+echo "██╗    ██╗███████╗██████╗ "
+echo "██║    ██║██╔════╝██╔══██╗"
+echo "██║ █╗ ██║█████╗  ██████╔╝"
+echo "██║███╗██║██╔══╝  ██╔══██╗"
+echo "╚███╔███╔╝███████╗██████╔╝"
+echo " ╚══╝╚══╝ ╚══════╝╚═════╝ Hacking Testing v2"
+
+#code
+echo $Y2
+echo $B"    [$R"01"$B]$G INFIRMATION GATHRING"
+echo $B"    [$R"02"$B]$G HASHES ID "
+echo $B"    [$R"03"$B]$G HASHES CRACKING 1"
+echo $B"    [$R"04"$B]$G HASHES CRACKING 2"
+echo $B"    [$R"05"$B]$G ONLINE HASHES CRACKER "  
+echo $B"    [$R"06"$B]$G WEB SITES DOS ATTACK "  
+echo $B"    [$R"07"$B]$G ADMIN PAGE FINDER " 
+echo $B"    [$R"00"$B]$G BACK "  
+echo $B"    [$W"XX"$B]$G EXIT "
+echo " "
+echo -n $R"[$W"Inf0rmati0n Gathering"$R]$W"~"$R"'#': 
+read zaki
+if [ "$zaki" = "1" ] || [ "$zaki" = "01" ];
+then
+echo
+$PREFIX/share/EasY_HaCk/modules/inf0
+elif [ "$zaki" = "2" ] || [ "$zaki" = "02" ];
+then 
+echo
+clear
+python $PREFIX/share/EasY_HaCk/modules/hash-id.py
+echo -n  $R"Press" ENTRE to back" "
+read ENTRE
+$PREFIX/share/EasY_HaCk/modules/web
+elif [ "$zaki" = "3" ] || [ "$zaki" = "03" ];
+then 
+echo
+python2 $PREFIX/share/EasY_HaCk/modules/Hash/Hash.py
+echo -n  $R"Press" ENTRE to back" "  
+read ENTRE
+$PREFIX/share/EasY_HaCk/modules/web
+elif [ "$zaki" = "4" ] || [ "$zaki" = "04" ];
+then 
+echo
+clear
+echo $W"password cracking$R [2]"
+echo $R"[$G*$R]$W"Algorithm"$R:$W md5$R-$W"sha1"$R-$W"sha224"$R-$W"sha256"$R-$W"sha384"$R-$W"sha512" "
+echo -n $W"Put the Correct Algorithm$R : "  
+read zaki
+echo -n $W"Put Your Hash to Crack$R :"
+read zaki2
+echo $W"the Cracking Process it can take $G"1~25 m" " $W
+echo
+date
+python2 $PREFIX/share/EasY_HaCk/modules/Python-Hash-Cracker/Hash-Cracker.py -t $zaki -h $zaki2 -w $PREFIX/share/EasY_HaCk/.modules/zaki.txt
+date
+echo -n  $R"Press" ENTRE to back" "  
+read ENTRE
+$PREFIX/share/EasY_HaCk/modules/web
+elif [ "$zaki" = "5" ] || [ "$zaki" = "05" ];
+then 
+echo
+termux-open https://crackstation.net
+echo -n  $R"Press" ENTRE to back" " 
+read ENTRE
+$PREFIX/share/EasY_HaCk/modules/web
+elif [ "$zaki" = "6" ] || [ "$zaki" = "06" ];
+then
+clear
+$PREFIX/share/EasY_HaCk/modules/dos
+elif [ "$zaki" = "7" ] || [ "$zaki" = "07" ];
+then
+clear
+echo $G"+-+-+-+-+-+$R +-+-+-+-+$W +-+-+-+-+-+-+"
+echo $G"|A|d|m|i|n|$R |p|a|g|e|$W |f|i|n|d|e|r|"
+echo $G"+-+-+-+-+-+$R +-+-+-+-+$W +-+-+-+-+-+-+ $Y2 v1.2"$G
+python2 $PREFIX/share/EasY_HaCk/modules/admin-page-finder.py
+$PREFIX/share/EasY_HaCk/modules/web
+elif [ "$zaki" = "00" ] || [ "$zaki" = "0" ];
+then
+clear
+echo "EasY_HacK "
+sleep 0.5
+clear
+echo "EasY_HacK ./ "
+sleep 0.5
+clear
+echo "EasY_HacK ..\ "
+sleep 0.5
+clear
+echo "EasY_HacK .../ "
+sleep 0.5
+clear
+echo "EasY_HacK ....\ "
+sleep 0.5
+clear
+echo "EasY_HacK ...../ "
+sleep 0.5
+clear
+echo "EasY_HacK ......\ "
+sleep 0.5
+clear
+echo "EasY_HacK ......./ "
+sleep 0.5
+clear
+echo "EasY_HacK ........\ "
+sleep 0.5
+clear
+echo "EasY_HacK ........./ "
+sleep 0.5
+clear
+echo "EasY_HacK ...........\ "
+EasY_HacK
+elif [ "$zaki" = "X" ] || [ "$zaki" = "x" ] || [ "$zaki" = "xx" ] || [ "$zaki" = "XX" ] ;
+then
+clear
+echo "$R E.\ "
+sleep 1
+clear
+echo "$R EX../ "
+sleep 1
+clear
+echo "$R EXI...\ "
+sleep 1
+clear
+echo "$R EXIT..../ "
+sleep 1
+exit 
+else
+clear
+echo $Y" Wrong Input..."
+sleep 1
+sh $0
+fi
